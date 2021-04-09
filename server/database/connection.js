@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 const connectDB = async ()=>{
     try{
     //MOngoDB Connection String
-    const con = await mongoose.connect(`mongodb+srv://agam:hello123@cluster0.65b2z.mongodb.net/CRUD?retryWrites=true&w=majority`, {
+    const con = await mongoose.connect(`mongodb+srv://Database URI`, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useFindAndModify: false,
