@@ -8,7 +8,7 @@ const route = require('./server/routes/router');
 const app = express();
 
 //Configurations
-const PORT =9000;
+const PORT = 3000;
 
 //MongoDB Connection
 connectDB();
@@ -31,12 +31,6 @@ app.use('/js',express.static(path.resolve(__dirname,"assets/js")));
 //Load Routers
 app.use('/', require('./server/routes/router'))
 
-//Home Route
-app.get('/',(req,res)=>{
-    res.status(200);
-    res.send("Crud Application");
-    res.end();
-});
 
 //HTTP Server Setting
 app.listen(PORT, ()=>{

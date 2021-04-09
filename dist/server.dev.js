@@ -16,7 +16,7 @@ var route = require('./server/routes/router');
 
 var app = express(); //Configurations
 
-var PORT = 9000; //MongoDB Connection
+var PORT = 3000; //MongoDB Connection
 
 connectDB(); //Body Parser
 
@@ -33,13 +33,7 @@ app.use('/css', express["static"](path.resolve(__dirname, "assets/css")));
 app.use('/img', express["static"](path.resolve(__dirname, "assets/img")));
 app.use('/js', express["static"](path.resolve(__dirname, "assets/js"))); //Load Routers
 
-app.use('/', require('./server/routes/router')); //Home Route
-
-app.get('/', function (req, res) {
-  res.status(200);
-  res.send("Crud Application");
-  res.end();
-}); //HTTP Server Setting
+app.use('/', require('./server/routes/router')); //HTTP Server Setting
 
 app.listen(PORT, function () {
   console.log("Server is running on Port:".concat(PORT));
