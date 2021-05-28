@@ -4,7 +4,7 @@ const connectDB = async () => {
     try{
         // mongodb connection string
         const con = await mongoose.connect(
-            `mongodb+srv://agam:hello123@cluster0.65b2z.mongodb.net/CRUD?retryWrites=true&w=majority`,
+       ,
              {
                  useNewUrlParser: true,
                   useUnifiedTopology: true,
